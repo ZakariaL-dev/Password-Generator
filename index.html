@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <i class="fa-solid fa-lock"></i>
+            <h1>Secure Password Generator</h1>
+            <p>Create strong, random passwords instantly</p>
+        </div>
+        <div class="middle">
+            <label class="inpico" for="passinp">
+                <input type="text" id="passinp" value="Random Password Generator" readonly>
+                <i id="copyicon" class="fa-solid fa-copy" onclick="copy('passinp')"></i>
+            </label>
+            <div id="feedback">Copied to clipboard!</div>
+            <div class="strengthwords">
+                <h4>Password Strength</h4>
+                <p id="strenghtpara">the strength</p>
+            </div>
+            <div class="strength">
+                <!--  -->
+                <span id="strengthline"></span>
+                <!--  -->
+            </div>
+            <div class="length" style="margin-top: 30px; margin-bottom: 20px;">
+                <p>Length: <span id="lengthnumb"></span></p>
+                <input type="range" id="lengthinp" min="6" max="32" value="12">
+            </div>
+            <ul>
+                <li><input type="checkbox" id="upper" checked>Uppercase Letters (A-Z)</li>
+                <li><input type="checkbox" id="lower" checked>Lowercase Letters (a-z)</li>
+                <li><input type="checkbox" id="number" checked>Numbers (0-9)</li>
+                <li><input type="checkbox" id="symbol" checked>Symbols (!@#$%^&*)</li>
+            </ul>
+            <button type="button" id="generatebtn">
+                <i class="fa-solid fa-rotate"></i>
+                Generate
+            </button>
+        </div>
+        <div class="footer">
+            <h3>&copy; 2025 Password Generator. All rights reserved.</h3>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
